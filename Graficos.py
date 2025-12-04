@@ -24,3 +24,12 @@ class Graficos:
         total_via.plot(kind="pie", autopct="%1.1f%%", title="Exceso por tipo de vía")
         plt.ylabel("")
         plt.show()
+
+
+    def grafico_3_histograma(self):
+        print("--- HISTOGRAMA: VELOCIDAD DETECTADA ---")
+        plt.hist(self.df["Velocidad_detectada"], bins=10)
+        plt.title("Histograma de velocidades")
+        plt.xlabel("Velocidad")
+        plt.ylabel("Frecuencia")
+        plt.show()
