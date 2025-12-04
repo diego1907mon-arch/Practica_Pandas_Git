@@ -16,3 +16,11 @@ class Graficos:
         plt.show()
 
  
+    def grafico_2_circular(self):
+        print("--- GRÁFICO: EXCESO POR TIPO DE VÍA ---")
+
+        total_via = self.df.groupby("Tipo_vía")["total_exceso"].sum()
+
+        total_via.plot(kind="pie", autopct="%1.1f%%", title="Exceso por tipo de vía")
+        plt.ylabel("")
+        plt.show()
